@@ -1,0 +1,58 @@
+/* Collapsed: hide everything in the post except our bar */
+.jl-collapsed > :not(.jl-bar) {
+  display: none !important;
+}
+
+/* Remove mode: hide the whole post */
+.jl-removed {
+  display: none !important;
+}
+
+.jl-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 6px 12px;
+  font: 13px/1.4 -apple-system, system-ui, "Segoe UI", Roboto, sans-serif;
+  color: #555;
+  background: #f3f2ef;
+  border-bottom: 1px solid #e0dfdc;
+  border-radius: 8px 8px 0 0;
+}
+
+.jl-collapsed > .jl-bar {
+  border-bottom: none;
+  border-radius: 8px;
+}
+
+.jl-bar-job {
+  background: #e7f3ec;
+  color: #1e6b3a;
+}
+
+.jl-clickable {
+  cursor: pointer;
+  text-decoration: underline dotted;
+}
+
+.jl-labels {
+  display: flex;
+  gap: 6px;
+}
+
+.jl-btn {
+  border: 1px solid #b8b6b2;
+  background: #fff;
+  border-radius: 12px;
+  padding: 2px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  color: #333;
+}
+
+.jl-btn-on {
+  background: #0a66c2;
+  border-color: #0a66c2;
+  color: #fff;
+}

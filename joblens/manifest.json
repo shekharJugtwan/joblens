@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "JobLens - LinkedIn Hiring Filter",
+  "version": "0.1.1",
+  "description": "Shows only hiring posts in your LinkedIn feed. Runs fully in your browser.",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.linkedin.com/*"],
+      "js": ["rules.js", "content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "JobLens"
+  }
+}

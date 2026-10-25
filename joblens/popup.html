@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { width: 260px; margin: 0; padding: 14px; font: 13px/1.4 system-ui, sans-serif; color: #222; }
+    h1 { font-size: 15px; margin: 0 0 12px; }
+    label.row { display: flex; justify-content: space-between; align-items: center; margin: 8px 0; }
+    select { font: inherit; }
+    hr { border: none; border-top: 1px solid #ddd; margin: 12px 0; }
+    .muted { color: #777; font-size: 12px; }
+    .btns { display: flex; gap: 6px; margin-top: 8px; }
+    button { flex: 1; font: inherit; padding: 5px; border-radius: 6px; border: 1px solid #bbb; background: #fff; cursor: pointer; }
+    button.primary { background: #0a66c2; color: #fff; border-color: #0a66c2; }
+  </style>
+</head>
+<body>
+  <h1>JobLens</h1>
+
+  <label class="row">Filter on <input type="checkbox" id="enabled"></label>
+  <label class="row">Non-job posts
+    <select id="mode">
+      <option value="collapse">Collapse</option>
+      <option value="remove">Remove</option>
+    </select>
+  </label>
+  <label class="row">Show scores <input type="checkbox" id="showScores"></label>
+
+  <hr>
+  <label class="row">Labeling mode <input type="checkbox" id="labeling"></label>
+  <div class="muted">Labeled posts: <b id="count">0</b> (stored only in this browser)</div>
+  <div class="btns">
+    <button class="primary" id="export">Export JSON</button>
+    <button id="clear">Clear</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
